@@ -65,6 +65,9 @@ console.assert(new Dog().says === "life is ruff");
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
 class Cat {
+  constructor(){
+
+  }
     growl() {
       return 'meow';
     }
@@ -94,8 +97,19 @@ console.assert(cat.growl() === "meow");
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
 class KeepSecret {
+  constructor(secret){
+    this.TheSecret= function() { return secret }
+    }
+    squeal() {return this.TheSecret()}
+    }
 
-}
+
+
+
+
+
+
+
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
 
@@ -124,6 +138,23 @@ console.assert(dontTellNobody.squeal() === mySecret);
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 
+
+class Key{
+  constructor(){
+          this.turnKey = function(){return theKey}
+        }
+      }
+
+class Safe{
+  constructor(secretData, theKey){
+  this.unlock = function(key) {
+    if (key === theKey){
+      console.log(secretData)
+      return secretData
+    }
+  }
+}
+}
 
 
 // -- ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ -- //
